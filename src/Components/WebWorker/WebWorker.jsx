@@ -1,9 +1,11 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useContext } from "react";
 import "./WebWorker.scss";
+import MainContext from "../Context/Context";
 
 function WebWorker(props) {
   const { workerLink } = props;
-  const [result, setResult] = useState(null);
+  const context = useContext(MainContext);
+  const [result, setResult] = useState("");
   const [worker, setWorker] = useState(null);
 
   const divRef = useRef();
@@ -18,6 +20,8 @@ function WebWorker(props) {
       setResult((prevState) => prevState + "\n" + event.data);
     };
 
+    myWorker.postMessage("setoption name Use NNUE value true");
+
     // Save the worker instance to state
     setWorker(myWorker);
 
@@ -28,33 +32,22 @@ function WebWorker(props) {
   }, []); // Run this effect only once when the component mounts
 
   useEffect(() => {
+    if (!worker || !context.uciInput) return;
+    worker.postMessage(context.uciInput);
+  }, [context.uciInput]);
+
+  useEffect(() => {
     // Scroll down the div whenever the text content changes
-    divRef.current.scrollTop = divRef.current.scrollHeight;
+    if (divRef && divRef.current && result)
+      divRef.current.scrollTop = divRef.current.scrollHeight;
   }, [result]);
 
-  const handleClick = () => {
-    // Send a message to the worker
-    if (worker) {
-      worker.postMessage("uci"); // Send the number 5 to the worker
-      const DEPTH = 20; // number of halfmoves the engine looks ahead
-      const FEN_POSITION = // chess position in FEN format
-        "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1";
-
-      worker.postMessage("uci");
-      worker.postMessage(`position fen ${FEN_POSITION}`);
-      worker.postMessage(`go depth ${DEPTH}`);
-    }
-  };
-
   return (
-    <div className="WebWorker">
+    <code className="WebWorker">
       <div className="results-wrapper" ref={divRef}>
-        Result from the worker: {result}
+        {result}
       </div>
-      <button className="workerButton" onClick={handleClick}>
-        Calculate in Web Worker
-      </button>
-    </div>
+    </code>
   );
 }
 

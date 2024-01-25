@@ -1,11 +1,205 @@
 .App {
+  @font-face {
+    font-display: swap;
+    font-family: Signifier;
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://cdn.oaistatic.com/_next/static/media/signifier-light.c131ea48.woff2)
+      format("woff2");
+  }
+
+  @font-face {
+    font-display: swap;
+    font-family: Signifier;
+    font-style: italic;
+    font-weight: 400;
+    src: url(https://cdn.oaistatic.com/_next/static/media/signifier-light-italic.ae129369.woff2)
+      format("woff2");
+  }
+
+  @font-face {
+    font-display: swap;
+    font-family: Signifier;
+    font-style: normal;
+    font-weight: 700;
+    src: url(https://cdn.oaistatic.com/_next/static/media/signifier-bold.3a11015f.woff2)
+      format("woff2");
+  }
+
+  @font-face {
+    font-display: swap;
+    font-family: Signifier;
+    font-style: italic;
+    font-weight: 700;
+    src: url(https://cdn.oaistatic.com/_next/static/media/signifier-bold-italic.52d511e3.woff2)
+      format("woff2");
+  }
+
+  @font-face {
+    font-display: swap;
+    font-family: SÃ¶hne;
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://cdn.oaistatic.com/_next/static/media/soehne-buch.13189857.woff2)
+      format("woff2");
+  }
+
+  @font-face {
+    font-display: swap;
+    font-family: SÃ¶hne;
+    font-style: italic;
+    font-weight: 400;
+    src: url(https://cdn.oaistatic.com/_next/static/media/soehne-buch-kursiv.1052965d.woff2)
+      format("woff2");
+  }
+
+  @font-face {
+    font-display: swap;
+    font-family: SÃ¶hne;
+    font-style: normal;
+    font-weight: 500;
+    src: url(https://cdn.oaistatic.com/_next/static/media/soehne-kraftig.204b461c.woff2)
+      format("woff2");
+  }
+
+  @font-face {
+    font-display: swap;
+    font-family: SÃ¶hne;
+    font-style: italic;
+    font-weight: 500;
+    src: url(https://cdn.oaistatic.com/_next/static/media/soehne-kraftig-kursiv.a0040f3f.woff2)
+      format("woff2");
+  }
+
+  @font-face {
+    font-display: swap;
+    font-family: SÃ¶hne;
+    font-style: normal;
+    font-weight: 600;
+    src: url(https://cdn.oaistatic.com/_next/static/media/soehne-halbfett.977f1845.woff2)
+      format("woff2");
+  }
+
+  @font-face {
+    font-display: swap;
+    font-family: SÃ¶hne;
+    font-style: italic;
+    font-weight: 600;
+    src: url(https://cdn.oaistatic.com/_next/static/media/soehne-halbfett-kursiv.cb37a814.woff2)
+      format("woff2");
+  }
+
+  @font-face {
+    font-display: swap;
+    font-family: SÃ¶hne Mono;
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://cdn.oaistatic.com/_next/static/media/soehne-mono-buch.de677af1.woff2)
+      format("woff2");
+  }
+
+  @font-face {
+    font-display: swap;
+    font-family: SÃ¶hne Mono;
+    font-style: normal;
+    font-weight: 700;
+    src: url(https://cdn.oaistatic.com/_next/static/media/soehne-mono-halbfett.b082e8e2.woff2)
+      format("woff2");
+  }
+
+  @font-face {
+    font-display: swap;
+    font-family: SÃ¶hne Mono;
+    font-style: italic;
+    font-weight: 400;
+    src: url(https://cdn.oaistatic.com/_next/static/media/soehne-mono-buch-kursiv.8eeb89d0.woff2)
+      format("woff2");
+  }
+
+  @font-face {
+    font-display: swap;
+    font-family: SÃ¶hne Circle;
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://cdn.oaistatic.com/_next/static/media/soehne-circle-buch.d446e5e9.woff2)
+      format("woff2");
+  }
+
+  @font-face {
+    font-display: swap;
+    font-family: SÃ¶hne Circle;
+    font-style: normal;
+    font-weight: 600;
+    src: url(https://cdn.oaistatic.com/_next/static/media/soehne-circle-halbfett.9eb377ad.woff2)
+      format("woff2");
+  }
   text-align: center;
-  .workerButton {
-    height: 31px;
-    bottom: 13px;
+  background: #343541;
+  font-family: SÃ¶hne;
+  color: #fcfcfc;
+  height: 100%;
+  width: 100%;
+  main {
+    height: 100%;
+    height: 100%;
+    display: flex;
+    .panel {
+      min-width: 260px;
+      height: 100%;
+      background-color: #000000;
+    }
+    .main-container {
+      height: 100%;
+      width: 100%;
+      .container {
+        // max-width: 48rem;
+        height: 100%;
+        position: relative;
+        margin: 0 auto;
+        .title {
+          height: 3.5rem;
+          text-align: left;
+          padding-left: 22px;
+          font-weight: 500;
+          font-size: 1.125rem;
+          line-height: 1.75rem;
+          padding-top: 15px;
+        }
+      }
+    }
+  }
+
+  form {
     position: absolute;
-    text-align: center;
-    left: 50%;
-    transform: translateX(-50%);
+    bottom: 15px;
+    width: 100%;
+    border: none !important;
+  }
+  .uciTextArea {
+    color: #fcfcfc;
+    position: relative;
+    width: 50em;
+    margin: 0 auto;
+    max-height: 200px;
+    textarea {
+      width: 49em;
+      background-color: transparent;
+      padding-right: 3rem;
+      border-radius: 21px;
+      padding-bottom: 0.875rem;
+      padding-top: 0.875rem;
+      padding-left: 1rem;
+      height: 52px;
+      resize: none;
+      margin: 0;
+      overflow-y: hidden;
+    }
+    button {
+      position: absolute;
+      right: 5em;
+      bottom: 1em;
+      background-color: transparent;
+      border: none;
+    }
   }
 }
