@@ -1,0 +1,11 @@
+.App {
+  text-align: center;
+  .workerButton {
+    height: 31px;
+    bottom: 13px;
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
