@@ -7,16 +7,34 @@
     white-space: pre-wrap;
     word-wrap: break-word;
     overflow: auto;
-    width: 39%;
-    margin: 0 auto;
-    background: black;
+    width: 43rem;
+    min-height: 482px;
+    margin: 3.5rem auto;
     padding: 0;
     border-radius: 15px;
+
+    .result {
+      background: black;
+      min-height: 100%;
+      padding: 1.5em;
+      padding-top: 2em;
+      border-bottom-left-radius: 15px;
+      border-bottom-right-radius: 15px;
+      margin-bottom: 50px;
+    }
+
+    .icon-sm {
+      stroke-width: 2;
+      height: 1rem;
+      width: 1rem;
+    }
+
     .results-title {
       display: flex;
       align-items: center;
-      position: relative;
+      position: fixed;
       color: inherit;
+      height: calc(1rem + 20px);
       background-color: #343541;
       padding-left: 1rem;
       padding-right: 1rem;
@@ -25,10 +43,12 @@
       font-size: 0.75rem;
       font-family: sans-serif;
       justify-content: space-between;
+      width: 43rem;
       button {
         background: transparent;
         border: 0;
         display: flex;
+        cursor: pointer;
         justify-content: center;
         align-items: center;
         gap: 0.5rem;

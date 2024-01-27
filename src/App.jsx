@@ -7,6 +7,9 @@ import Textarea from "react-expanding-textarea";
 function App() {
   const [userInput, setUserInput] = useState("");
   const [uciInput, setUciInput] = useState("");
+  const [result, setResult] = useState("");
+
+  const divRef = useRef();
 
   const handleSubmit = (e) => {
     if (e) e.preventDefault();
@@ -25,6 +28,12 @@ function App() {
     }
   };
 
+  useEffect(() => {
+    // Scroll down the div whenever the text content changes
+    if (divRef && divRef.current && result)
+      divRef.current.scrollTop = divRef.current.scrollHeight;
+  }, [result]);
+
   const handleChange = useCallback((e) => {
     setUserInput(e.target.value);
   }, []);
@@ -36,13 +45,15 @@ function App() {
         setUserInput,
         uciInput,
         setUciInput,
+        result,
+        setResult,
       }}
     >
-      <div className="App">
+      <div className="App dark">
         <main>
           <div className="panel"></div>
           <div className="main-container">
-            <div className="container">
+            <div className="container" ref={divRef}>
               <div className="title">Stockfish Worker React.js Example</div>
               <WebWorker workerLink="/stockfish/src/stockfish-nnue-16.js" />
               <div className="form-wrapper">

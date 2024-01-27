@@ -23,10 +23,14 @@
         overflow: auto;
         margin: 0 auto;
         .title {
+          position: fixed;
+          background: #343541;
           height: 3.5rem;
           text-align: left;
+          z-index: 999;
           padding-left: 22px;
           font-weight: 500;
+          width: 100%;
           font-size: 1.125rem;
           line-height: 1.75rem;
           padding-top: 15px;
@@ -38,7 +42,7 @@
   form {
     position: fixed;
     bottom: 0px;
-    min-height: 106px;
+    min-height: 86px;
     width: calc(100% - 260px);
     display: flex;
     justify-content: center;
