@@ -45,7 +45,12 @@ function InputUCI(props) {
             value={context.userInput}
           />
 
-          <button type="submit" disabled="" data-testid="send-button">
+          <button
+            className={context.userInput ? "active" : null}
+            type="submit"
+            disabled=""
+            data-testid="send-button"
+          >
             <span>
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                 <path
