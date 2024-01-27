@@ -1,17 +1,151 @@
+@font-face {
+  font-display: swap;
+  font-family: Signifier;
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://cdn.oaistatic.com/_next/static/media/signifier-light.c131ea48.woff2)
+    format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Signifier;
+  font-style: italic;
+  font-weight: 400;
+  src: url(https://cdn.oaistatic.com/_next/static/media/signifier-light-italic.ae129369.woff2)
+    format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Signifier;
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://cdn.oaistatic.com/_next/static/media/signifier-bold.3a11015f.woff2)
+    format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Signifier;
+  font-style: italic;
+  font-weight: 700;
+  src: url(https://cdn.oaistatic.com/_next/static/media/signifier-bold-italic.52d511e3.woff2)
+    format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: SÃ¶hne;
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://cdn.oaistatic.com/_next/static/media/soehne-buch.13189857.woff2)
+    format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: SÃ¶hne;
+  font-style: italic;
+  font-weight: 400;
+  src: url(https://cdn.oaistatic.com/_next/static/media/soehne-buch-kursiv.1052965d.woff2)
+    format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: SÃ¶hne;
+  font-style: normal;
+  font-weight: 500;
+  src: url(https://cdn.oaistatic.com/_next/static/media/soehne-kraftig.204b461c.woff2)
+    format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: SÃ¶hne;
+  font-style: italic;
+  font-weight: 500;
+  src: url(https://cdn.oaistatic.com/_next/static/media/soehne-kraftig-kursiv.a0040f3f.woff2)
+    format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: SÃ¶hne;
+  font-style: normal;
+  font-weight: 600;
+  src: url(https://cdn.oaistatic.com/_next/static/media/soehne-halbfett.977f1845.woff2)
+    format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: SÃ¶hne;
+  font-style: italic;
+  font-weight: 600;
+  src: url(https://cdn.oaistatic.com/_next/static/media/soehne-halbfett-kursiv.cb37a814.woff2)
+    format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: SÃ¶hne Mono;
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://cdn.oaistatic.com/_next/static/media/soehne-mono-buch.de677af1.woff2)
+    format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: SÃ¶hne Mono;
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://cdn.oaistatic.com/_next/static/media/soehne-mono-halbfett.b082e8e2.woff2)
+    format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: SÃ¶hne Mono;
+  font-style: italic;
+  font-weight: 400;
+  src: url(https://cdn.oaistatic.com/_next/static/media/soehne-mono-buch-kursiv.8eeb89d0.woff2)
+    format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: SÃ¶hne Circle;
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://cdn.oaistatic.com/_next/static/media/soehne-circle-buch.d446e5e9.woff2)
+    format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: SÃ¶hne Circle;
+  font-style: normal;
+  font-weight: 600;
+  src: url(https://cdn.oaistatic.com/_next/static/media/soehne-circle-halbfett.9eb377ad.woff2)
+    format("woff2");
+}
+
 html,
 body,
 #root {
   height: 100%;
   min-width: 100%;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+}
+
+* {
+  font-family: SÃ¶hne, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  box-sizing: border-box;
 }

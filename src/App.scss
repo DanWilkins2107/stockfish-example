@@ -1,141 +1,6 @@
 .App {
-  @font-face {
-    font-display: swap;
-    font-family: Signifier;
-    font-style: normal;
-    font-weight: 400;
-    src: url(https://cdn.oaistatic.com/_next/static/media/signifier-light.c131ea48.woff2)
-      format("woff2");
-  }
-
-  @font-face {
-    font-display: swap;
-    font-family: Signifier;
-    font-style: italic;
-    font-weight: 400;
-    src: url(https://cdn.oaistatic.com/_next/static/media/signifier-light-italic.ae129369.woff2)
-      format("woff2");
-  }
-
-  @font-face {
-    font-display: swap;
-    font-family: Signifier;
-    font-style: normal;
-    font-weight: 700;
-    src: url(https://cdn.oaistatic.com/_next/static/media/signifier-bold.3a11015f.woff2)
-      format("woff2");
-  }
-
-  @font-face {
-    font-display: swap;
-    font-family: Signifier;
-    font-style: italic;
-    font-weight: 700;
-    src: url(https://cdn.oaistatic.com/_next/static/media/signifier-bold-italic.52d511e3.woff2)
-      format("woff2");
-  }
-
-  @font-face {
-    font-display: swap;
-    font-family: SÃ¶hne;
-    font-style: normal;
-    font-weight: 400;
-    src: url(https://cdn.oaistatic.com/_next/static/media/soehne-buch.13189857.woff2)
-      format("woff2");
-  }
-
-  @font-face {
-    font-display: swap;
-    font-family: SÃ¶hne;
-    font-style: italic;
-    font-weight: 400;
-    src: url(https://cdn.oaistatic.com/_next/static/media/soehne-buch-kursiv.1052965d.woff2)
-      format("woff2");
-  }
-
-  @font-face {
-    font-display: swap;
-    font-family: SÃ¶hne;
-    font-style: normal;
-    font-weight: 500;
-    src: url(https://cdn.oaistatic.com/_next/static/media/soehne-kraftig.204b461c.woff2)
-      format("woff2");
-  }
-
-  @font-face {
-    font-display: swap;
-    font-family: SÃ¶hne;
-    font-style: italic;
-    font-weight: 500;
-    src: url(https://cdn.oaistatic.com/_next/static/media/soehne-kraftig-kursiv.a0040f3f.woff2)
-      format("woff2");
-  }
-
-  @font-face {
-    font-display: swap;
-    font-family: SÃ¶hne;
-    font-style: normal;
-    font-weight: 600;
-    src: url(https://cdn.oaistatic.com/_next/static/media/soehne-halbfett.977f1845.woff2)
-      format("woff2");
-  }
-
-  @font-face {
-    font-display: swap;
-    font-family: SÃ¶hne;
-    font-style: italic;
-    font-weight: 600;
-    src: url(https://cdn.oaistatic.com/_next/static/media/soehne-halbfett-kursiv.cb37a814.woff2)
-      format("woff2");
-  }
-
-  @font-face {
-    font-display: swap;
-    font-family: SÃ¶hne Mono;
-    font-style: normal;
-    font-weight: 400;
-    src: url(https://cdn.oaistatic.com/_next/static/media/soehne-mono-buch.de677af1.woff2)
-      format("woff2");
-  }
-
-  @font-face {
-    font-display: swap;
-    font-family: SÃ¶hne Mono;
-    font-style: normal;
-    font-weight: 700;
-    src: url(https://cdn.oaistatic.com/_next/static/media/soehne-mono-halbfett.b082e8e2.woff2)
-      format("woff2");
-  }
-
-  @font-face {
-    font-display: swap;
-    font-family: SÃ¶hne Mono;
-    font-style: italic;
-    font-weight: 400;
-    src: url(https://cdn.oaistatic.com/_next/static/media/soehne-mono-buch-kursiv.8eeb89d0.woff2)
-      format("woff2");
-  }
-
-  @font-face {
-    font-display: swap;
-    font-family: SÃ¶hne Circle;
-    font-style: normal;
-    font-weight: 400;
-    src: url(https://cdn.oaistatic.com/_next/static/media/soehne-circle-buch.d446e5e9.woff2)
-      format("woff2");
-  }
-
-  @font-face {
-    font-display: swap;
-    font-family: SÃ¶hne Circle;
-    font-style: normal;
-    font-weight: 600;
-    src: url(https://cdn.oaistatic.com/_next/static/media/soehne-circle-halbfett.9eb377ad.woff2)
-      format("woff2");
-  }
   text-align: center;
   background: #343541;
-  font-family: SÃ¶hne;
   color: #fcfcfc;
   height: 100%;
   width: 100%;
@@ -155,6 +20,7 @@
         // max-width: 48rem;
         height: 100%;
         position: relative;
+        overflow: auto;
         margin: 0 auto;
         .title {
           height: 3.5rem;
@@ -170,36 +36,94 @@
   }
 
   form {
-    position: absolute;
-    bottom: 15px;
-    width: 100%;
+    position: fixed;
+    bottom: 0px;
+    min-height: 106px;
+    width: calc(100% - 260px);
+    display: flex;
+    justify-content: center;
+    z-index: 999;
+    background: #343541;
     border: none !important;
   }
+
   .uciTextArea {
+    width: 47.9em;
+    background: #343541;
     color: #fcfcfc;
-    position: relative;
-    width: 50em;
     margin: 0 auto;
+    display: flex;
     max-height: 200px;
+    bottom: 31px;
+    z-index: 999;
+    position: absolute;
+
     textarea {
-      width: 49em;
+      width: 47.9em;
       background-color: transparent;
-      padding-right: 3rem;
-      border-radius: 21px;
+      border-radius: 15px;
       padding-bottom: 0.875rem;
       padding-top: 0.875rem;
       padding-left: 1rem;
+      padding-right: 6em;
+      max-height: 200px;
       height: 52px;
+      box-sizing: border-box;
       resize: none;
       margin: 0;
-      overflow-y: hidden;
+      color: #fcfcfc !important;
+      border-color: #8e8ea0;
+      font-size: 1rem;
+      line-height: 1.5rem;
     }
+
+    audio,
+    canvas,
+    embed,
+    iframe,
+    img,
+    object,
+    svg,
+    video {
+      display: block;
+    }
+
+    textarea:hover,
+    textarea:active,
+    textarea:focus {
+      outline: none;
+    }
+
+    button,
+    select {
+      text-transform: none;
+    }
+
+    button,
+    input,
+    optgroup,
+    select {
+      color: inherit;
+      font-family: inherit;
+      font-size: 100%;
+      font-weight: inherit;
+      line-height: inherit;
+      margin: 0;
+      padding: 0;
+    }
+
     button {
       position: absolute;
-      right: 5em;
-      bottom: 1em;
-      background-color: transparent;
       border: none;
+      right: 1em;
+      top: 50%;
+      color: rgb(52, 53, 65);
+      --tw-bg-opacity: 1;
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 0.125rem;
+      border-width: 1px;
+      border-radius: 0.5rem;
+      transform: translateY(-50%);
     }
   }
 }

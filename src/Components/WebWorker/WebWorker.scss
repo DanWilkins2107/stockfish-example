@@ -3,9 +3,39 @@
     width: 0%;
   }
   .results-wrapper {
+    display: block;
     white-space: pre-wrap;
+    word-wrap: break-word;
     overflow: auto;
-    width: 90%;
+    width: 39%;
     margin: 0 auto;
+    background: black;
+    padding: 0;
+    border-radius: 15px;
+    .results-title {
+      display: flex;
+      align-items: center;
+      position: relative;
+      color: inherit;
+      background-color: #343541;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+      font-size: 0.75rem;
+      font-family: sans-serif;
+      justify-content: space-between;
+      button {
+        background: transparent;
+        border: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+        color: inherit;
+        font-size: inherit;
+        font-family: inherit;
+      }
+    }
   }
 }
